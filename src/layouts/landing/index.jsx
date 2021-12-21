@@ -6,8 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 import SideBar from "./navBar/sidebar";
 import TopBar from "./navBar/topBar";
+import {RootContainer} from './elements';
 
-const drawerWidth = 250;
+const drawerWidth = 220;
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -38,7 +39,7 @@ const LandingLayout = ({ children }) => {
     }
 
     return (
-        <div>
+        <RootContainer>
             <CssBaseline />
             <TopBar
                 open={open}
@@ -58,7 +59,7 @@ const LandingLayout = ({ children }) => {
             >
                 {children}
             </main>
-        </div>
+        </RootContainer>
     );
 };
 

@@ -6,6 +6,7 @@ import {
     AppBar,
     Toolbar,
     IconButton,
+    Box
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -19,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
         })
     },
     appBarShift: {
-        width: ({ drawerWidth }) =>`calc(100% - ${drawerWidth}px)`,
-        marginLeft: ({drawerWidth})=>drawerWidth,
+        width: ({ drawerWidth }) => `calc(100% - ${drawerWidth}px)`,
+        marginLeft: ({ drawerWidth }) => drawerWidth,
         transition: theme.transitions.create(["margin", "width"], {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen
@@ -29,36 +30,42 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2)
     },
-    
+    toolbar:{
+        justifyContent: 'space-between',
+    }
+
 }));
 
 const TopBar = (props) => {
-    const{ open,  onOpen, drawerWidth} = props;
+    const { open, onOpen, drawerWidth } = props;
     const classes = useStyles({ drawerWidth: drawerWidth });
-    
+
     return (
         <AppBar
-        position="static"
-        color="paper"
-        className={classNames(classes.appBar, { [classes.appBarShift]: open })}
-    >
-        <Toolbar>
-            {!open && (
-                <IconButton
-                    edge="start"
-                    className={classes.menuButton}
-                    color="inherit"
-                    onClick={onOpen}
-                >
-                    <MenuIcon />
-                </IconButton>
-            )}
-            <Button color="inherit">Login</Button>
-        </Toolbar>
-    </AppBar>
+            position="static"
+            color="paper"
+            className={classNames(classes.appBar, { [classes.appBarShift]: open })}
+        >
+            <Toolbar
+            classes={{root: classes.toolbar}}
+            >
+                {!open && (
+                    <IconButton
+                        edge="start"
+                        className={classes.menuButton}
+                        color="inherit"
+                        onClick={onOpen}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                )}
+                <div />
+                <Button color="inherit">AppName</Button>
+            </Toolbar>
+        </AppBar>
     )
 }
- TopBar.propTypes = {
+TopBar.propTypes = {
 
 }
 
