@@ -24,7 +24,8 @@ const AppRoute = () => {
                         </Layout>
                     );
 
-                    return <Route path={path} exact={exact} key={path} element={children}/>
+                    return (
+                         <Route path={path} exact={exact} key={path} element={children}/>)
                 })}
             </Routes>
         </BrowserRouter>
