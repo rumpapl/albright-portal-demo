@@ -20,6 +20,9 @@
         default: "rgb(249, 249, 249)", // cream
         paper: "rgb(256, 256, 256)", // white
      },
+     solid:{
+        white: "rgb(256, 256, 256)",
+     }
 }
 
 export default  colors;

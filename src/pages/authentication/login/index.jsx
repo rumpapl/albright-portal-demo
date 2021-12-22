@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
 
+// internal imports
+import { FormContainer,
+    FormImageWrapper } from './elements';
+import { FaceIcon } from '../../../assets/icons/face';
 const Login = () => {
     return (
-        <div>
-            login page
-        </div>
+        <FormContainer>
+            <FormImageWrapper>
+                <FaceIcon />
+            </FormImageWrapper>
+        </FormContainer>
     )
 }
 

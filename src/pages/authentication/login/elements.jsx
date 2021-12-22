@@ -1,0 +1,18 @@
+import { styled } from "@material-ui/core";
+import { Box } from "@material-ui/core";
+
+// internal imports
+import {
+    FormContainerAuth,
+    FormImageContiner,
+} from '../../../components/elements';
+
+
+export const FormContainer = styled(FormContainerAuth)(({ theme }) => ({}));
+export const FormImageWrapper = styled(FormImageContiner)(({ theme }) => ({
+
+    '& .MuiSvgIcon-root': {
+        height: 150,
+        width: 150
+    }
+}));
