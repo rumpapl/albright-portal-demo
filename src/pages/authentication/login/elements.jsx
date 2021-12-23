@@ -7,6 +7,15 @@ import {
     FormImageContiner,
 } from '../../../components/elements';
 
+export{
+    InputContainer
+} from '../../../components/material-ui/input/elements';
+
+// internl exports
+export{
+    FormAuth
+} from '../../../components/elements';
+
 
 export const FormContainer = styled(FormContainerAuth)(({ theme }) => ({}));
 export const FormImageWrapper = styled(FormImageContiner)(({ theme }) => ({

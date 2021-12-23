@@ -23,3 +23,9 @@ export const FormImageContiner = styled(Box)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
 }));
+
+export const FormAuth=styled('form')(({theme})=>({
+    gap: 20,
+    display: 'flex',
+    flexDirection: 'column'
+}))
