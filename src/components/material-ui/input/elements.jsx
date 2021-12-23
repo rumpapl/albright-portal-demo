@@ -17,10 +17,8 @@ export const OutlinedTextField = withStyles((theme) => ({
         marginTop: 10,
         "& .MuiInputBase-root": {
             "& fieldset": {
-                padding: 12.9,
                 borderRadius: 10,
                 border: "0.5px solid #BABAC2",
-                fontSize: theme.typography.pxToRem(14),
                 transition: theme.transitions.create(["border-color", "box-shadow"]),
             },
             "&:hover fieldset": {
@@ -33,6 +31,9 @@ export const OutlinedTextField = withStyles((theme) => ({
             },
             "& .MuiInputBase-input ": {
                 borderRadius: 10,
+                fontSize: theme.typography.pxToRem(12),
+                padding: 12.5,
+
             }
         },
     },

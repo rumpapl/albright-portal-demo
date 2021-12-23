@@ -5,7 +5,7 @@ import MuiFormLabel from "@material-ui/core/FormLabel";
 export const FormLabel = withStyles((theme) => ({
     root: {
         color: theme.palette.primary.main,
-        fontSize: theme.typography.pxToRem(14),
+        fontSize: theme.typography.pxToRem(12),
 
     },
     asterisk: {

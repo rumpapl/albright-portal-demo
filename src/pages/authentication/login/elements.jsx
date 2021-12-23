@@ -21,7 +21,7 @@ export const FormContainer = styled(FormContainerAuth)(({ theme }) => ({}));
 export const FormImageWrapper = styled(FormImageContiner)(({ theme }) => ({
 
     '& .MuiSvgIcon-root': {
-        height: 150,
-        width: 150
+        height: 100,
+        width: 100
     }
 }));
