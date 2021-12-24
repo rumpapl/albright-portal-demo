@@ -1,3 +1,4 @@
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 
-export const FaceIcon = EmojiEmotionsIcon;
+ const FaceIcon = EmojiEmotionsIcon;
+ export default FaceIcon;

@@ -1,5 +1,9 @@
 import { styled } from "@material-ui/core";
 import { Box } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+
+// internal imports
+import { RoundButton } from "../material-ui/button";
 
 export const FormContainerAuth = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -25,7 +29,20 @@ export const FormImageContiner = styled(Box)(({ theme }) => ({
 }));
 
 export const FormAuth = styled('form')(({ theme }) => ({
-    gap: 15,
+    gap: 20,
     display: 'flex',
     flexDirection: 'column'
-}))
+}));
+
+export const FromActionContainer = styled(Box)(({theme})=>({
+    marginTop: 10,
+    marginBottom: 30
+}));
+
+export const FormRoundedButton=withStyles((theme)=>({
+    root:{
+        width: '100%',
+        height: 35,
+    }
+
+}))(RoundButton);

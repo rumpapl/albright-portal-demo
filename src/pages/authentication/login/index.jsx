@@ -3,14 +3,19 @@ import { useForm } from 'react-hook-form';
 
 
 // internal imports
+import {
+    FaceIcon,
+    StartIcon,
+} from '../../../assets/icons';
 import { FormController } from '../../../components/hoc';
 import {
     FormContainer,
     FormImageWrapper,
     FormAuth,
-    InputContainer
+    InputContainer,
+    FromActionContainer,
+    FormRoundedButton,
 } from './elements';
-import { FaceIcon } from '../../../assets/icons/face';
 import {
     OutlinedLabelTextField,
     OutlinedLabelPasswordField
@@ -53,6 +58,14 @@ const Login = () => {
                         <OutlinedLabelPasswordField label='Password' />
                     </FormController>
                 </InputContainer>
+                <FromActionContainer>
+                    <FormRoundedButton
+                        color="primary"
+                        variant="contained"
+                        type="submit"
+                        startIcon={<StartIcon/>}
+                    >Log in</FormRoundedButton>
+                </FromActionContainer>
             </FormAuth>
         </FormContainer>
     )

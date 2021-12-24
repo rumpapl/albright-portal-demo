@@ -8,12 +8,14 @@ import {
 } from '../../../components/elements';
 
 export{
-    InputContainer
+    InputContainer,
 } from '../../../components/material-ui/input/elements';
 
 // internl exports
 export{
-    FormAuth
+    FormAuth,
+    FromActionContainer,
+    FormRoundedButton,
 } from '../../../components/elements';
 
 
