@@ -13,7 +13,7 @@ import {
     FormImageWrapper,
     FormAuth,
     InputContainer,
-    FromActionContainer,
+    FormActionContainer,
     FormRoundedButton,
 } from './elements';
 import {
@@ -73,7 +73,7 @@ const Login = () => {
                         <OutlinedLabelPasswordField label='Password' />
                     </FormController>
                 </InputContainer>
-                <FromActionContainer>
+                <FormActionContainer>
                     <FormRoundedButton
                         color="primary"
                         variant="contained"
@@ -82,7 +82,7 @@ const Login = () => {
                     >
                         Log in
                     </FormRoundedButton>
-                </FromActionContainer>
+                </FormActionContainer>
             </FormAuth>
         </FormContainer>
     )

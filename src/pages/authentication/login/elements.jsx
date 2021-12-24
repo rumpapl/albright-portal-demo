@@ -14,7 +14,7 @@ export{
 // internl exports
 export{
     FormAuth,
-    FromActionContainer,
+    FormActionContainer,
     FormRoundedButton,
 } from '../../../components/elements';
 

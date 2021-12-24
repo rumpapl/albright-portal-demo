@@ -34,9 +34,9 @@ export const FormAuth = styled('form')(({ theme }) => ({
     flexDirection: 'column'
 }));
 
-export const FromActionContainer = styled(Box)(({theme})=>({
+export const FormActionContainer = styled(Box)(({theme})=>({
     marginTop: 10,
-    marginBottom: 30
+    marginBottom: 30,
 }));
 
 export const FormRoundedButton=withStyles((theme)=>({
