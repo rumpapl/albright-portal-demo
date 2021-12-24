@@ -1,13 +1,16 @@
 import React, { Fragment, Suspense } from 'react';
-import PropTypes from 'prop-types';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 // internal impports
 import BROWSE_ROUTE from './paths';
 import { LandingLayout } from '../layouts';
+import { selectUser } from '../store';
+
 
 
 const AppRoute = () => {
+    const user = useSelector(selectUser);
     return (
         <BrowserRouter>
             <Routes>
@@ -18,22 +21,24 @@ const AppRoute = () => {
 
                     const children = (
                         <Layout>
-                             <Suspense fallback={<div>Loading...</div>}>
-                            <Component />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Component />
                             </Suspense>
                         </Layout>
                     );
 
-                    return (
-                         <Route path={path} exact={exact} key={path} element={children}/>)
+                    return authenticated ?
+                        user ?
+                            <Route path={path} exact={exact} key={path} element={children} />
+                            :
+                            <Route path="*"
+                                key="*"
+                                element={<Navigate to="/login" />} />
+                        :
+                        <Route path={path} exact={exact} key={path} element={children} />;
                 })}
             </Routes>
         </BrowserRouter>
     )
 }
-
-AppRoute.propTypes = {
-
-}
-
 export default AppRoute;

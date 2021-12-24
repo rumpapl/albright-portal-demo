@@ -1,5 +1,7 @@
 import React, { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../store';
 
 
 // internal imports
@@ -32,9 +34,13 @@ const Login = () => {
         defaultValues: defaultValues,
     });
 
+    const dispatch = useDispatch();
+    
     const onSubmit = useCallback(
         (data) => {
             console.log(data);
+            // store data into redux store
+            dispatch(login(data));
         },
         []
     );
