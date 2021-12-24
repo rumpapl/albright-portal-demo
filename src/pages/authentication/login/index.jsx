@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import { useForm } from 'react-hook-form';
-import { InputLabel } from '@material-ui/core';
-import ExpandMore from "@material-ui/icons/ExpandMore";
-import { TextField, InputAdornment } from "@material-ui/core";
+
 
 // internal imports
 import { FormController } from '../../../components/hoc';
@@ -13,7 +11,10 @@ import {
     InputContainer
 } from './elements';
 import { FaceIcon } from '../../../assets/icons/face';
-import { OutlinedLabelTextField } from '../../../components/material-ui';
+import {
+    OutlinedLabelTextField,
+    OutlinedLabelPasswordField
+} from '../../../components/material-ui';
 
 
 const Login = () => {
@@ -36,6 +37,20 @@ const Login = () => {
                         }}
                     >
                         <OutlinedLabelTextField label='Username' />
+                    </FormController>
+                </InputContainer>
+                <InputContainer>
+                    <FormController
+                        name='password'
+                        control={control}
+                        rules={{
+                            required: {
+                                value: true,
+                                message: "Please provide Password"
+                            },
+                        }}
+                    >
+                        <OutlinedLabelPasswordField label='Password' />
                     </FormController>
                 </InputContainer>
             </FormAuth>

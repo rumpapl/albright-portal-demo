@@ -1,12 +1,11 @@
 import React, { Fragment, forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import { TextField, InputLabel } from '@material-ui/core';
 
 // internal imports
 import {
     OutlinedTextField,
     FormLabel,
- } from './elements';
+} from './elements';
 
 export const OutlinedLabelTextField = forwardRef((props, ref) => {
     const {

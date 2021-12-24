@@ -6,6 +6,7 @@ export const FormLabel = withStyles((theme) => ({
     root: {
         color: theme.palette.primary.main,
         fontSize: theme.typography.pxToRem(12),
+        marginBottom: 5,
 
     },
     asterisk: {
