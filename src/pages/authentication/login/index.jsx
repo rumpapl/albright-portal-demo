@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 
 
@@ -23,13 +23,28 @@ import {
 
 
 const Login = () => {
-    const { control, register, } = useForm();
+    const defaultValues = {
+        username: '',
+        password: '',
+    };
+
+    const { control, handleSubmit, } = useForm({
+        defaultValues: defaultValues,
+    });
+
+    const onSubmit = useCallback(
+        (data) => {
+            console.log(data);
+        },
+        []
+    );
+
     return (
         <FormContainer>
             <FormImageWrapper>
                 <FaceIcon />
             </FormImageWrapper>
-            <FormAuth>
+            <FormAuth onSubmit={handleSubmit(onSubmit)}>
                 <InputContainer>
                     <FormController
                         name='username'
@@ -63,8 +78,10 @@ const Login = () => {
                         color="primary"
                         variant="contained"
                         type="submit"
-                        startIcon={<StartIcon/>}
-                    >Log in</FormRoundedButton>
+                        startIcon={<StartIcon />}
+                    >
+                        Log in
+                    </FormRoundedButton>
                 </FromActionContainer>
             </FormAuth>
         </FormContainer>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import { FormHelperText } from '@material-ui/core';
 
 
 // internal imports
@@ -54,6 +55,9 @@ const OutlinedLabelPasswordField = forwardRef((props, ref) => {
                     </InputAdornment>
                 }
             />
+            {Boolean(helperText) && (
+                <FormHelperText error={error}>{helperText}</FormHelperText>
+            )}
         </Fragment>
     )
 });

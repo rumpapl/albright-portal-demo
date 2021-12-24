@@ -37,11 +37,12 @@ export const OutlinedTextField = withStyles((theme) => ({
         padding: 10,
       }
     },
+    error: {
+      borderRadius: 10,
+      border: `0.5px solid ${theme.palette.error.main}`,
+    },
   },
-  error: {
-    borderRadius: 10,
-    border: `0.5px solid ${theme.palette.error.main}`,
-  },
+  
 }))(TextField);
 
 export const OutlinedInput = withStyles((theme) => ({

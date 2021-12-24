@@ -1,5 +1,6 @@
 import React, { Fragment, forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import { FormHelperText } from '@material-ui/core';
 
 // internal imports
 import {
@@ -12,6 +13,8 @@ export const OutlinedLabelTextField = forwardRef((props, ref) => {
         label,
         required,
         placeholder,
+        error,
+        helperText,
         ...others } = props;
     return (
         <Fragment>
@@ -21,8 +24,12 @@ export const OutlinedLabelTextField = forwardRef((props, ref) => {
                 fullWidth
                 inputRef={ref}
                 placeholder={placeholder}
+                error={error}
                 {...others}
             />
+            {Boolean(helperText) && (
+                <FormHelperText error={error}>{helperText}</FormHelperText>
+            )}
         </Fragment>
     )
 });
